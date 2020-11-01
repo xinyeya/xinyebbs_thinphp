@@ -1,0 +1,58 @@
+{extend name="layout" /}
+
+{block name="title"}
+{$title}
+{/block}
+
+{block name="meta"}
+
+{/block}
+
+{block name="css"}
+<link rel="stylesheet" href="/static/css/about/index.css">
+{/block}
+
+{block name="content"}
+<div class="about">
+    <div class="about-blog">
+        <div class="about-blog-title">关于博客</div>
+        <!-- 简介 -->
+        <div class="about-blog-desc">
+            <span>
+                我一直想拥有一个自己的小网站，分享自己的东西，记录自己的生活。好多东西都是长时间不用就容易忘记，记录下来，以后有时间在翻看就会有不一样的收获。
+            </span>
+        </div>
+        <!--技术栈-->
+        <div class="about-blog-tech">
+            <div class="about-blog-tech-title">
+                技术栈
+            </div>
+            <ul>
+                <li>ThinkPhP</li>
+                <li>Mysql</li>
+                <li>React</li>
+                <li>layUI</li>
+                <li>jQuery</li>
+                <li>Swiper</li>
+                <li>font-awesome</li>
+                <li>AntdUI</li>
+            </ul>
+        </div>
+    </div>
+    <div class="about-blogger">
+        <div class="about-blogger-title">关于博主</div>
+        <div class="about-blogger-desc">
+            <p>
+                一名95后程序员，主要做web前端开发，目前主要使用的框架是由php语言写的ThinkPHP。个人比较喜欢编程，也喜欢学习一些好玩的技术等。<br>
+            </p>
+            <p>
+                本博客文章如有转载，请注明出处。
+            </p>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="js"}
+
+{/block}
