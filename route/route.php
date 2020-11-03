@@ -12,14 +12,16 @@
 use \think\facade\Route;
 use \app\http\middleware\Auth;
 
-Route::group("/", function () {
+// 前台
+Route::group("", function () {
     Route::get("/", "home/index/index")->name("index/index");
-    Route::get("/article_detail/index", "home/articleDetail/index")->name("article_detail/index");
+    Route::get("/detail/:id", "home/articleDetail/index")->name("article_detail/index");
     Route::get("/classify/index", "home/classify/index")->name("classify/index");
     Route::get("/message/index", "home/message/index")->name("message/index");
     Route::get("/about/index", "home/about/index")->name("about/index");
 });
 
+// 后台
 Route::group("admin/v1.0", function () {
     Route::group("",function () {
         // 文章管理
@@ -80,9 +82,9 @@ Route::group("admin/v1.0", function () {
     // 登录
     Route::post("/login", "admin/login/index")->name("admin/login");
 })
-    ->header("Access-Control-Allow-Origin:*")
+    ->header("Access-Control-Allow-Origin: *")
     ->header('Access-Control-Allow-Credentials', 'true')
-    ->header("Access-Control-Allow-Methods:GET, POST")
-    ->header("Access-Control-Allow-Headers: tokenXinye,Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With")
+    ->header("Access-Control-Allow-Methods: GET, POST, PUT,DELETE,OPTIONS,PATCH")
+    ->header("Access-Control-Allow-Headers: tokenXinye, Origin, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With")
     ->allowCrossDomain();
 

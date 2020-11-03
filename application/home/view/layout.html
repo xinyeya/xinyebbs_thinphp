@@ -31,7 +31,6 @@
 
 <!-- 背景图 -->
 <canvas id="canvas" class="layui-hide-xs"></canvas>
-
 <div class="layui-container m-show spread2" style="margin-top: 10px" id="main">
     <div class="layui-row layui-col-space20">
 <!--        头部-->
@@ -46,7 +45,7 @@
                 <div class="nav">
                     <div id="nav">
                         <a href="/">首页</a>
-                        <a href="/article_detail/index?id={$id=1}">博文</a>
+                        <a href="/detail/1">博文</a>
                         <a href="/classify/index">分类</a>
                         <a href="/message/index">留言</a>
                         <a href="/about/index">关于我</a>
@@ -56,16 +55,12 @@
                 <div class="swiper layui-hide-xs">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
-                            <div class="swiper-slide">Slide 6</div>
-                            <div class="swiper-slide">Slide 7</div>
-                            <div class="swiper-slide">Slide 8</div>
-                            <div class="swiper-slide">Slide 9</div>
-                            <div class="swiper-slide">Slide 10</div>
+                            <div class="swiper-slide">
+                                <img src="/static/swiperImage/01.jpg" alt="中二病也要谈恋爱，小鸟游六花">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/static/swiperImage/02.png" alt="妖精之夜">
+                            </div>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -81,12 +76,12 @@
             <div class="user">
                 <!--头像-->
                 <div class="avatar layui-hide-xs">
-                    <img src="data:image/jpeg;base64,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" alt="">
+                    <img src={$userInfo.avatar} alt="">
                 </div>
                 <!--签名-->
                 <div class="signature">
-                    <div class="title">心叶</div>
-                    <div class="text">一个前端菜鸟的学习路</div>
+                    <div class="title">{$userInfo.username}</div>
+                    <div class="text">{$userInfo.desc}</div>
                 </div>
                 <!--个人信息-->
                 <div class="userinfo">
@@ -179,16 +174,9 @@
                     </h3>
                     <hr />
                     <div id="tagscloud">
-                        <a href="http://sc.chinaz.com/" class="tagc1">js特效代码</a>
-                        <a href="http://sc.chinaz.com/" class="tagc2">网页小图标</a>
-                        <a href="http://sc.chinaz.com/" class="tagc5">jquery特效代码</a>
-                        <a href="http://sc.chinaz.com/" class="tagc2">js特效代码<a>
-                        <a href="http://sc.chinaz.com/" class="tagc2" >网页小图标</a>
-                        <a href="http://sc.chinaz.com/" class="tagc1" >网站常用代码</a>
-                        <a href="http://sc.chinaz.com/" class="tagc2">js特效代码</a>
-                        <a href="http://sc.chinaz.com/" class="tagc5">jquery特效代码</a>
-                        <a href="http://sc.chinaz.com/" class="tagc2">网页小图标</a>
-                        <a href="http://sc.chinaz.com/" class="tagc2">代码笔记</a>
+                        {foreach $labels as $key=>$val}
+                            <a href="http://sc.chinaz.com/" class="tagc{$key}">{$val.title}</a>
+                        {/foreach}
                     </div>
                 </div>
                 <!--阅读排行-->
@@ -225,12 +213,9 @@
                     <h3><i class="layui-icon layui-icon-face-smile-fine" style="font-size: 20px;margin-right: 5px; color:#FF5722"></i>友情链接</h3>
                     <hr>
                     <ul>
-                        <li><a href="#">友情链接</a></li>
-                        <li><a href="#">友情链接</a></li>
-                        <li><a href="#">友情链接</a></li>
-                        <li><a href="#">友情链接</a></li>
-                        <li><a href="#">友情链接</a></li>
-                        <li><a href="#">友情链接</a></li>
+                        {foreach $friend_link as $key=>$val}
+                            <li><a href={$val.link} target="_blank">{$val.title}</a></li>
+                        {/foreach}
                     </ul>
                 </div>
             </div>

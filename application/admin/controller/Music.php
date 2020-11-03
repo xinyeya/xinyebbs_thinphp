@@ -182,7 +182,7 @@ class Music extends Controller
             $info = $file->validate(['ext'=>'jpg,jpeg,png'])->move( '../public/static/uploads/admin/music/image');
             if($info){
                 // 成功上传后 获取上传信息
-                return json(["code"=>200, "msg"=>"上传成功","data"=>$_SERVER['SERVER_NAME']."/static/uploads/admin/music/image/".$info->getSaveName()]);
+                return json(["code"=>200, "msg"=>"上传成功","data"=>"http://".$_SERVER['SERVER_NAME']."/static/uploads/admin/music/image/".$info->getSaveName()]);
             }else{
                 // 上传失败获取错误信息
                 return json(["code"=>500, "msg"=>$file->getError()]);
@@ -201,7 +201,7 @@ class Music extends Controller
             $info = $file->validate(['ext'=>'mp3,flac'])->move( '../public/static/uploads/admin/music/file');
             if($info){
                 // 成功上传后 获取上传信息
-                return json(["code"=>200, "msg"=>"上传成功","data"=>$_SERVER['SERVER_NAME']."/static/uploads/admin/music/file/".$info->getSaveName()]);
+                return json(["code"=>200, "msg"=>"上传成功","data"=>"http://".$_SERVER['SERVER_NAME']."/static/uploads/admin/music/file/".$info->getSaveName()]);
             }else{
                 // 上传失败获取错误信息
                 return json(["code"=>500, "msg"=>$file->getError()]);
