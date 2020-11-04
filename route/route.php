@@ -14,11 +14,18 @@ use \app\http\middleware\Auth;
 
 // 前台
 Route::group("", function () {
-    Route::get("/", "home/index/index")->name("index/index");
-    Route::get("/detail/:id", "home/articleDetail/index")->name("article_detail/index");
-    Route::get("/classify/index", "home/classify/index")->name("classify/index");
-    Route::get("/message/index", "home/message/index")->name("message/index");
-    Route::get("/about/index", "home/about/index")->name("about/index");
+    // 菜单和首页
+    Route::group("", function () {
+        Route::get('/', "@home/index/index")->name("home/index/index");
+        Route::get('/recourse', "@home/menu/response")->name("home/menu/response");
+        Route::get('/about', "@home/menu/about")->name("home/menu/about");
+    });
+
+    // 文章
+    Route::group('article', function () {
+        Route::get('/:id', "@home/index/article")->name("home/article/index");
+        Route::get('/type/:type', "@home/index/type")->name("home/article/type");
+    });
 });
 
 // 后台

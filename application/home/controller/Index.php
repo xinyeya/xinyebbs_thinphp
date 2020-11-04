@@ -4,40 +4,42 @@ namespace app\home\controller;
 
 use think\Controller;
 use think\Db;
-use \Common;
+use think\facade\View;
 
 class Index extends Controller
 {
+    private function getCommonData() {
+        // 热门文章
+        $article = getArticleRead();
 
-    // 获取用户信息
-    public function index () {
-        // 查询文章内容
-        $userInfo = Common::getUserInfo();
+        // 查询所有分类
+        $classify = getClassify();
 
-        // 查询文章
-        $article = Db::table('bbs_article')
-            ->where('status', 1)
-            ->order('id', "desc")
-            ->paginate(5, true, [
-                'type'     => 'bootstrap',
-                'var_page' => 'page',
-            ]);
+        // 查询所有标签
+        $labels = getLabels();
 
-        // 获取分页显示
-        $page = $article->render();
+        $this->assign([
+            'article'  => $article,
+            'classify' => $classify,
+            'labels' => $labels
+        ]);
+    }
 
-        // 查询标签
-        $labels = Common::getLabels();
+    // 显示首页
+    public function index() {
+        $this->getCommonData();
+        return $this->fetch("index/index");
+    }
 
-        // 友情链接
-        $friend_link = Common::getLink();
+    public function article($id) {
+        echo $id;
+        $this->getCommonData();
+        return $this->fetch("index/index");
+    }
 
-        $data['userInfo'] = $userInfo;
-        $data['article'] = $article;
-        $data['labels'] = $labels;
-        $data['friend_link'] = $friend_link;
-        $data['page'] = $page;
-
-        return $this->fetch('home@index/index', $data);
+    public function type($type) {
+        echo $type;
+        $this->getCommonData();
+        return $this->fetch("index/index");
     }
 }
