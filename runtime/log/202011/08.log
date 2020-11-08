@@ -1,0 +1,52 @@
+---------------------------------------------------------------
+
+[2020-11-08T12:27:15+08:00] 127.0.0.1 GET bbsxinye.com/about
+[ error ] [8]未定义数组索引: HTTP_X_FORWARDED_FOR
+[ error ] [8]未定义数组索引: HTTP_CLIENT_IP
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001869s ] mysql:host=127.0.0.1;port=3306;dbname=xinye;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `bbs_pv` [ RunTime:0.001599s ]
+[ sql ] [ SQL ] INSERT INTO `bbs_pv` (`ip`) VALUES ('127.0.0.1') [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_pv` [ RunTime:0.000310s ]
+---------------------------------------------------------------
+
+[2020-11-08T12:27:16+08:00] 127.0.0.1 GET bbsxinye.com/recourse
+[ error ] [8]未定义数组索引: HTTP_X_FORWARDED_FOR
+[ error ] [8]未定义数组索引: HTTP_CLIENT_IP
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001645s ] mysql:host=127.0.0.1;port=3306;dbname=xinye;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `bbs_pv` [ RunTime:0.001807s ]
+[ sql ] [ SQL ] INSERT INTO `bbs_pv` (`ip`) VALUES ('127.0.0.1') [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_pv` [ RunTime:0.001015s ]
+---------------------------------------------------------------
+
+[2020-11-08T12:27:18+08:00] 127.0.0.1 GET bbsxinye.com/recourse
+[ error ] [8]未定义数组索引: HTTP_X_FORWARDED_FOR
+[ error ] [8]未定义数组索引: HTTP_CLIENT_IP
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001141s ] mysql:host=127.0.0.1;port=3306;dbname=xinye;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `bbs_pv` [ RunTime:0.000857s ]
+[ sql ] [ SQL ] INSERT INTO `bbs_pv` (`ip`) VALUES ('127.0.0.1') [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_pv` [ RunTime:0.000207s ]
+---------------------------------------------------------------
+
+[2020-11-08T12:27:20+08:00] 127.0.0.1 GET bbsxinye.com/
+[ error ] [8]未定义数组索引: HTTP_X_FORWARDED_FOR
+[ error ] [8]未定义数组索引: HTTP_CLIENT_IP
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001179s ] mysql:host=127.0.0.1;port=3306;dbname=xinye;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `bbs_pv` [ RunTime:0.001391s ]
+[ sql ] [ SQL ] INSERT INTO `bbs_pv` (`ip`) VALUES ('127.0.0.1') [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_pv` [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `bbs_article` [ RunTime:0.001383s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `bbs_article` WHERE  `status` = 1 ORDER BY `read` DESC [ RunTime:0.001278s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `bbs_classify` [ RunTime:0.001224s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `bbs_classify` [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_classify` [ RunTime:0.000200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `classify_id` = 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `classify_id` = 2 [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `classify_id` = 3 [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `classify_id` = 4 [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `classify_id` = 5 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `classify_id` = 6 [ RunTime:0.000278s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `classify_id` = 7 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `bbs_labels` [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SELECT `id`,`title` FROM `bbs_labels` [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `status` = 1 [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`desc`,`labels`,`status`,`create_time`,`read`,`commont` FROM `bbs_article` WHERE  `status` = 1 LIMIT 0,10 [ RunTime:0.000685s ]

@@ -1,0 +1,51 @@
+.detail .article_title,
+.detail .article_menu {
+  text-align: left;
+}
+.detail .article_title h3,
+.detail .article_menu h3 {
+  margin-left: 10px;
+}
+.detail .article_menu {
+  margin-bottom: 10px;
+}
+.detail .cshare {
+  text-align: left;
+}
+.detail .cshare span {
+  color: #1b9dec;
+}
+.detail .cshare i {
+  cursor: pointer;
+}
+.detail .comment {
+  margin-top: 20px;
+}
+.detail .comment h4 {
+  text-align: left;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border-bottom: 1px solid #777777;
+}
+.detail .show-comment h4 {
+  text-align: left;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border-bottom: 1px solid #777777;
+}
+.detail .show-comment .item {
+  margin-top: 30px;
+}
+.detail .show-comment .item .user {
+  display: flex;
+}
+.detail .show-comment .item .user div {
+  margin-right: 20px;
+}
+.detail .show-comment .item .content {
+  margin-top: 10px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #EBEEF5;
+  text-align: left;
+}
+/*# sourceMappingURL=article.css.map */

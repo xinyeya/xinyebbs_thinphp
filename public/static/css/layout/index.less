@@ -1,0 +1,267 @@
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #DBE6E8;
+  color: #777;
+}
+// 顶部
+.header{
+  width: 100vw;
+  height: 200px;
+  background-image: url("/static/image/bgk.png");
+  background-position: center;
+  text-align: center;
+}
+
+// 菜单栏
+.menu{
+  width: 100vw;
+  background-color: #F8F8F8;
+  zoom: 1;
+  &:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  // PC菜单按钮
+  ul{
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 60px;
+    float: left;
+    li{
+      display: inline-block;
+      text-align: center;
+      width: 58px;
+      height: 50px;
+      line-height: 50px;
+      &.active{
+        background-color: #E7E7E7;
+      }
+    }
+    a{
+      color: #777777;
+      text-decoration: none;
+    }
+  }
+  // 移动端显示/隐藏菜单按钮
+  .btn{
+    float: right;
+    i{
+      font-size: 40px;
+    }
+  }
+}
+
+// 移动端菜单栏
+.min-menu{
+  background-color: #FFFFFF;
+  display: none;
+  ul{
+    list-style: none;
+    padding: 0;
+    a{
+      color: #777;
+    }
+    li{
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      &.active{
+        background-color: #E7E7E7;
+      }
+    }
+  }
+}
+
+// 左边的栏
+.panel-body{
+  text-align: center;
+  span{
+    padding: 0 10px;
+    &.time{
+      font-size: 20px;
+    }
+  }
+  // 热门文章
+  .article{
+    p{
+      border-bottom: 2px solid #777777;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    ul{
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -o-flex;
+      display: -ms-flex;
+      justify-content: start;
+      -webkit-justify-content: flex-start;
+      -webkit-align-items: center;
+      align-items: center;
+      border-bottom: 1px solid #777777;
+      height: 30px;
+      &:hover{
+        background-color: #dddddd;
+      }
+      li{
+        margin-left: 10px;
+        &:last-child{
+          text-align: left;
+          width: 80%;
+          word-break:keep-all;/* 不换行 */
+          white-space:nowrap;/* 不换行 */
+          overflow:hidden;
+          text-overflow:ellipsis;
+        }
+        a{
+          color: #777777;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // 分类
+  .classify {
+    p{
+      border-bottom: 2px solid #777777;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    ul{
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #777777;
+      height: 30px;
+      &:hover{
+        background-color: #dddddd;
+      }
+      li{
+        margin-left: 5px;
+        margin-right: 5px;
+        a{
+          color: #777777;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // 标签
+  .labels {
+    p{
+      border-bottom: 2px solid #777777;
+      text-align: left;
+      padding-left: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    div{
+      display: flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -moz-flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      a{
+        margin: 5px;
+        color: #000000;
+        .tag{
+          display: inline-block;
+          border: 1px solid #8c8c8c;
+          padding: 3px;
+          border-radius: 3px;
+        }
+        &:hover{
+          background-color: #dddddd;
+        }
+      }
+    }
+  }
+}
+
+// 主要内容
+.main{
+  width: 100vw;
+  margin: 20px 0 40px 0;
+  // 导航栏
+  .nav{
+    width: 100%;
+    height: 50px;
+    // tab栏
+    .tabs{
+      display: inline-block;
+      width: 60%;
+      flex: 1;
+      li{
+        width: 20%;
+        text-align: center;
+        line-height: 50px;
+        &.active{
+          border-bottom: #0f0f0f solid 3px;
+        }
+      }
+    }
+    .search{
+      width: 40%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      #input{
+        width: 80% !important;
+      }
+      button{
+        outline: none;
+        box-shadow:none;
+      }
+    }
+  }
+}
+
+// 底部
+.footer{
+  color: #0f0f0f;
+  width: 100vw;
+  padding-top: 20px;
+  background-color: #A7B0C4;
+  p{
+    text-align: center;
+    a{
+      color: #000000;
+    }
+  }
+}
+
+// 回到顶部
+.top{
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  font-size: 50px;
+  opacity: 0;
+}

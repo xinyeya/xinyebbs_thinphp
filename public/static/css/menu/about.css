@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.about .user,
+.about .blog {
+  text-align: left;
+  color: #0f0f0f;
+}
+.about .user h4,
+.about .blog h4 {
+  font-weight: bold;
+  text-align: center;
+}
+.about .user ul,
+.about .blog ul {
+  padding: 0;
+  list-style: none;
+}
+.about .user ul li i,
+.about .blog ul li i {
+  text-align: center;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+}
+.about .image {
+  width: 200px;
+}
+.about .image img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=about.css.map */

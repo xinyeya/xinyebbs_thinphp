@@ -1,0 +1,64 @@
+.recourse .recu {
+  margin-bottom: 30px;
+}
+.recourse .recu .title {
+  text-align: left;
+  height: 40px;
+  border-bottom: 1px solid #DCDFE6;
+}
+.recourse .recu .title i {
+  font-size: 20px;
+  color: #0f0f0f;
+}
+.recourse .recu .title h4 {
+  margin-left: 20px;
+  display: inline-block;
+}
+.recourse .recu .link {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  justify-content: start;
+  -webkit-justify-content: flex-start;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+.recourse .recu .link a {
+  text-decoration: none;
+}
+.recourse .recu .link .item {
+  color: #0f0f0f;
+  width: 250px;
+  background-color: #FFFFFF;
+  border: 1px solid #dddddd;
+  margin: 10px;
+  border-radius: 5px;
+}
+.recourse .recu .link .item img {
+  width: 50px;
+  height: 50px;
+}
+.recourse .recu .link .item .text {
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+}
+.recourse .recu .link .item .text h5 {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.recourse .recu .link .item .text span {
+  display: inline-block;
+  width: 190px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 11px;
+  color: #929292;
+}
+/*# sourceMappingURL=recourse.css.map */

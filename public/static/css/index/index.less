@@ -1,0 +1,33 @@
+// 文章
+.article-list{
+  .article-item{
+    text-align: left;
+    a{
+      color: rgba(23, 49, 74, 0.84);
+      text-decoration: none;
+      h3{
+        font-size: 24px;
+      }
+    }
+    .desc{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      span{
+        display: block;
+        width: 80%;
+        overflow:hidden; //超出的文本隐藏
+        text-overflow:ellipsis; //用省略号显示
+        white-space:nowrap; //不换行
+      }
+      a{
+        color: #2aabd2;
+        display: block;
+      }
+    }
+  }
+}
+.page{
+  width: 100%;
+  text-align: center;
+}

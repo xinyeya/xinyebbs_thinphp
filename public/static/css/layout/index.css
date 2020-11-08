@@ -1,0 +1,242 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #DBE6E8;
+  color: #777;
+}
+.header {
+  width: 100vw;
+  height: 200px;
+  background-image: url("/static/image/bgk.png");
+  background-position: center;
+  text-align: center;
+}
+.menu {
+  width: 100vw;
+  background-color: #F8F8F8;
+  zoom: 1;
+}
+.menu:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.menu ul {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 60px;
+  float: left;
+}
+.menu ul li {
+  display: inline-block;
+  text-align: center;
+  width: 58px;
+  height: 50px;
+  line-height: 50px;
+}
+.menu ul li.active {
+  background-color: #E7E7E7;
+}
+.menu ul a {
+  color: #777777;
+  text-decoration: none;
+}
+.menu .btn {
+  float: right;
+}
+.menu .btn i {
+  font-size: 40px;
+}
+.min-menu {
+  background-color: #FFFFFF;
+  display: none;
+}
+.min-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.min-menu ul a {
+  color: #777;
+}
+.min-menu ul li {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.min-menu ul li.active {
+  background-color: #E7E7E7;
+}
+.panel-body {
+  text-align: center;
+}
+.panel-body span {
+  padding: 0 10px;
+}
+.panel-body span.time {
+  font-size: 20px;
+}
+.panel-body .article p {
+  border-bottom: 2px solid #777777;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.panel-body .article ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flex;
+  justify-content: start;
+  -webkit-justify-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 1px solid #777777;
+  height: 30px;
+}
+.panel-body .article ul:hover {
+  background-color: #dddddd;
+}
+.panel-body .article ul li {
+  margin-left: 10px;
+}
+.panel-body .article ul li:last-child {
+  text-align: left;
+  width: 80%;
+  word-break: keep-all;
+  /* 不换行 */
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.panel-body .article ul li a {
+  color: #777777;
+  text-decoration: none;
+}
+.panel-body .classify p {
+  border-bottom: 2px solid #777777;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.panel-body .classify ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #777777;
+  height: 30px;
+}
+.panel-body .classify ul:hover {
+  background-color: #dddddd;
+}
+.panel-body .classify ul li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.panel-body .classify ul li a {
+  color: #777777;
+  text-decoration: none;
+}
+.panel-body .labels p {
+  border-bottom: 2px solid #777777;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.panel-body .labels div {
+  display: flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+.panel-body .labels div a {
+  margin: 5px;
+  color: #000000;
+}
+.panel-body .labels div a .tag {
+  display: inline-block;
+  border: 1px solid #8c8c8c;
+  padding: 3px;
+  border-radius: 3px;
+}
+.panel-body .labels div a:hover {
+  background-color: #dddddd;
+}
+.main {
+  width: 100vw;
+  margin: 20px 0 40px 0;
+}
+.main .nav {
+  width: 100%;
+  height: 50px;
+}
+.main .nav .tabs {
+  display: inline-block;
+  width: 60%;
+  flex: 1;
+}
+.main .nav .tabs li {
+  width: 20%;
+  text-align: center;
+  line-height: 50px;
+}
+.main .nav .tabs li.active {
+  border-bottom: #0f0f0f solid 3px;
+}
+.main .nav .search {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.main .nav .search #input {
+  width: 80% !important;
+}
+.main .nav .search button {
+  outline: none;
+  box-shadow: none;
+}
+.footer {
+  color: #0f0f0f;
+  width: 100vw;
+  padding-top: 20px;
+  background-color: #A7B0C4;
+}
+.footer p {
+  text-align: center;
+}
+.footer p a {
+  color: #000000;
+}
+.top {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  font-size: 50px;
+  opacity: 0;
+}
+/*# sourceMappingURL=index.css.map */

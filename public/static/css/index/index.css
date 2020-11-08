@@ -1,0 +1,31 @@
+.article-list .article-item {
+  text-align: left;
+}
+.article-list .article-item a {
+  color: rgba(23, 49, 74, 0.84);
+  text-decoration: none;
+}
+.article-list .article-item a h3 {
+  font-size: 24px;
+}
+.article-list .article-item .desc {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.article-list .article-item .desc span {
+  display: block;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.article-list .article-item .desc a {
+  color: #2aabd2;
+  display: block;
+}
+.page {
+  width: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */
