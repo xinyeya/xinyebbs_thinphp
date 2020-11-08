@@ -50,3 +50,44 @@
 [ sql ] [ SQL ] SELECT `id`,`title` FROM `bbs_labels` [ RunTime:0.000328s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `bbs_article` WHERE  `status` = 1 [ RunTime:0.000554s ]
 [ sql ] [ SQL ] SELECT `id`,`title`,`desc`,`labels`,`status`,`create_time`,`read`,`commont` FROM `bbs_article` WHERE  `status` = 1 LIMIT 0,10 [ RunTime:0.000685s ]
+---------------------------------------------------------------
+
+[2020-11-08T12:57:20+08:00] 127.0.0.1 GET bbsxinye.com/
+[运行时间：0.152833s] [吞吐率：6.54req/s] [内存消耗：2,851.30kb] [文件加载：71]
+[ info ] [ LANG ] C:\xinye\data\Code\tp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 
+      array (
+        0 => 'app\\http\\middleware\\CheckIp',
+        1 => NULL,
+      ),
+    ),
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'close',
+  'host' => 'bbsxinye.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ error ] [8]未定义数组索引: HTTP_X_FORWARDED_FOR[C:\xinye\data\Code\tp5\application\common.php:52]
+[ error ] [8]未定义数组索引: HTTP_CLIENT_IP[C:\xinye\data\Code\tp5\application\common.php:54]
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'xinye'@'localhost' (using password: YES)[C:\xinye\data\Code\tp5\thinkphp\library\think\db\Connection.php:528]

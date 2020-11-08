@@ -1,3 +1,9 @@
+.detail pre {
+  text-align: left;
+}
+.detail p {
+  text-align: left !important;
+}
 .detail .article_title,
 .detail .article_menu {
   text-align: left;
@@ -47,5 +53,11 @@
   padding: 10px 20px 10px 20px;
   border: 1px solid #EBEEF5;
   text-align: left;
+}
+.article_content p {
+  text-align: left;
+}
+.article_content .ql-align-center {
+  text-align: center;
 }
 /*# sourceMappingURL=article.css.map */
