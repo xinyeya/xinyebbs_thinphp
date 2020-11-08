@@ -17,7 +17,7 @@ class ArticleValidate extends Validate
         'desc' =>  'require',
         'labels' => 'require',
         'content' => 'require',
-        'image' => 'require',
+//        'image' => 'require',
 //        'user_id' => 'require|number',
         'classify_id' => 'require|number'
     ];
@@ -34,7 +34,7 @@ class ArticleValidate extends Validate
         'desc.require' => '简介不能为空',
         'labels.require' => '标签不能为空',
         'content.require' => '内容不能为空',
-        'image.require' => '图片路径不能为空',
+//        'image.require' => '图片路径不能为空',
 //        'user_id.require' => '作者id不能为空',
 //        'user_id.number' => '作者id必须是数字',
         'classify_id.require' => '分类id不能为空',

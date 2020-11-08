@@ -1,0 +1,166 @@
+{extend name="base" /}
+
+{block name="css"}
+<link rel="stylesheet" href="__STATIC__/css/menu/recourse.css">
+{/block}
+
+{block name="asider"}
+{/block}
+{block name="tab"}
+{/block}
+
+{block name="main"}
+<div class="recourse container">
+    <div class="panel">
+        <div class="panel-body">
+            <!-- 个人网站 -->
+            <div class="recu">
+                <div class="title">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <h4>个人网站</h4>
+                </div>
+                <div class="link">
+                </div>
+            </div>
+
+            <!-- js相关 -->
+            <div class="recu">
+                <div class="title">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <h4>前端相关</h4>
+                </div>
+                <div class="link">
+                    {volist name="web" id="val"}
+                    <a href={$val.link} target="_blank">
+                        <div class="item">
+                            <img src={$val.image} alt="">
+                            <div class="text">
+                                <h5>{$val.title}</h5>
+                                <span>
+                                    {$val.desc}
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    {/volist}
+                </div>
+            </div>
+
+            <!-- UI库 -->
+            <div class="recu">
+                <div class="title">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <h4>UI框架</h4>
+                </div>
+                <div class="link">
+                    {volist name="ui" id="val"}
+                    <a href={$val.link} target="_blank">
+                        <div class="item">
+                            <img src={$val.image} alt="">
+                            <div class="text">
+                                <h5>{$val.title}</h5>
+                                <span>
+                                    {$val.desc}
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    {/volist}
+                </div>
+            </div>
+
+            <!-- 插件 -->
+            <div class="recu">
+                <div class="title">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <h4>插件库</h4>
+                </div>
+                <div class="link">
+                    {volist name="loader" id="val"}
+                    <a href={$val.link} target="_blank">
+                        <div class="item">
+                            <img src={$val.image} alt="">
+                            <div class="text">
+                                <h5>{$val.title}</h5>
+                                <span>
+                                    {$val.desc}
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    {/volist}
+                </div>
+            </div>
+
+            <!-- php相关 -->
+            <div class="recu">
+                <div class="title">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <h4>PHP相关</h4>
+                </div>
+                <div class="link">
+                    {volist name="php" id="val"}
+                    <a href={$val.link} target="_blank">
+                        <div class="item">
+                            <img src={$val.image} alt="">
+                            <div class="text">
+                                <h5>{$val.title}</h5>
+                                <span>
+                                    {$val.desc}
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    {/volist}
+                </div>
+            </div>
+
+            <!-- 资源链接 -->
+            <div class="recu">
+                <div class="title">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <h4>资源链接</h4>
+                </div>
+                <div class="link">
+                    {volist name="recourse" id="val"}
+                    <a href={$val.link} target="_blank">
+                        <div class="item">
+                            <img src={$val.image} alt="">
+                            <div class="text">
+                                <h5>{$val.title}</h5>
+                                <span>
+                                    {$val.desc}
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    {/volist}
+                </div>
+            </div>
+
+            <!--友情链接-->
+            <div class="recu">
+                <div class="title">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <h4>友情链接</h4>
+                </div>
+                <div class="link">
+                    {volist name="friend" id="val"}
+                    <a href={$val.link} target="_blank">
+                        <div class="item">
+                            <img src={$val.image} alt="">
+                            <div class="text">
+                                <h5>{$val.title}</h5>
+                                <span>
+                                    {$val.desc}
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

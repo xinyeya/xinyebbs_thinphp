@@ -32,7 +32,7 @@ class Classify extends Migrator
 DROP TABLE IF EXISTS `bbs_classify`;
 CREATE TABLE `bbs_classify`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '分类id',
-  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '分类标题',
+  `title` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '分类标题',
   `desc` tinytext CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '分类描述',
   `delete_time` varchar(20) NULL DEFAULT NULL COMMENT '软删除',
   PRIMARY KEY (`id`) USING BTREE

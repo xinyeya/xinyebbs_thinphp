@@ -39,11 +39,13 @@ CREATE TABLE `bbs_article`  (
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '文章封面',
   `status` tinyint(1) NULL DEFAULT 0 COMMENT '文章状态，1：已发布，0：草稿文',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '文章发布时间',
+  `read` int(10) UNSIGNED ZEROFILL NULL DEFAULT 0000000000 COMMENT '阅读数量',
+  `commont` int(10) UNSIGNED ZEROFILL NULL DEFAULT 0000000000 COMMENT '评论数量',
   `user_id` int(11) NULL DEFAULT NULL COMMENT '文章作者id',
   `classify_id` int(11) NULL DEFAULT NULL COMMENT '分类id',
-  `delete_time` varchar(20) NULL DEFAULT NULL COMMENT '软删除',
+  `delete_time` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '软删除',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 0 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '分类表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '分类表' ROW_FORMAT = Dynamic;
 EON;
 
         $this->execute($sql);

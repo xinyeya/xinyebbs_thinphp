@@ -32,14 +32,15 @@ class Comment extends Migrator
 DROP TABLE IF EXISTS `bbs_comment`;
 CREATE TABLE `bbs_comment`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '评论id',
-  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
-  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户邮箱',
+  `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
+  `email` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户邮箱',
   `content` tinytext CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '评论内容',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '评论时间',
   `comment_id` int(11) NULL DEFAULT NULL COMMENT '回复id',
   `article_id` int(11) NULL DEFAULT NULL COMMENT '文章id',
-  `delete_time` varchar(20) NULL DEFAULT NULL COMMENT '软删除',
+  `delete_time` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '软删除',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '评论id' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '评论id' ROW_FORMAT = Dynamic;
 XXX;
         $this->execute($sql);
 

@@ -11,22 +11,25 @@
 
 use \think\facade\Route;
 use \app\http\middleware\Auth;
+use \app\http\middleware\CheckIp;
 
 // 前台
 Route::group("", function () {
     // 菜单和首页
     Route::group("", function () {
-        Route::get('/', "@home/index/index")->name("home/index/index");
-        Route::get('/recourse', "@home/menu/response")->name("home/menu/response");
-        Route::get('/about', "@home/menu/about")->name("home/menu/about");
+        Route::get('/', "index/index/index")->name("index/index/index");
+        Route::get('/recourse', "index/menu/recourse")->name("index/menu/recourse");
+        Route::get('/about', "index/menu/about")->name("index/menu/about");
     });
 
     // 文章
     Route::group('article', function () {
-        Route::get('/:id', "@home/index/article")->name("home/article/index");
-        Route::get('/type/:type', "@home/index/type")->name("home/article/type");
+        Route::get('/:id', "index/index/article")->name("index/article/index");
+        Route::post('/comment', "index/index/articleComment")->name("index/article/articleComment");
+        Route::get('/type/:type', "index/index/type")->name("index/article/type");
     });
-});
+    Route::get('/search', "index/index/search")->name("index/article/search");
+})->middleware(CheckIp::class);;
 
 // 后台
 Route::group("admin/v1.0", function () {

@@ -1,0 +1,60 @@
+{extend name="base" /}
+
+{block name="css"}
+<link rel="stylesheet" href="__STATIC__/css/index/index.css">
+{/block}
+
+{block name="main"}
+<div>
+    <!-- 文章 -->
+    {volist name="articleList" id="val"}
+    <div class="panel">
+        <div class="panel-body">
+            <div class="article-list">
+                <div class="article-item">
+                    <!-- 标题 -->
+                    <a href="/article/{$val.id}">
+                        <h3>{$val.title}</h3>
+                    </a>
+                    <!-- 详情 -->
+                    <div class="desc">
+                    <span>
+                        <strong>简介：</strong>
+                        {$val.desc}
+                    </span>
+                        <a href="/article/{$val.id}">查看原文</a>
+                    </div>
+                    <!-- 杂项 -->
+                    <div class="misce">
+                    <span>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        {$val.create_time}
+                    </span>
+                        <span>
+                        <i class="fa fa-commenting" aria-hidden="true"></i>
+                        {$val.commont}
+                    </span>
+                        <span>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        {$val.read}
+                    </span>
+                        <span>
+                        <i class="fa fa-tags" aria-hidden="true"></i>
+                        {$val.labels}
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/volist}
+    <div class="page">
+        <div class="f_page">
+            {$page|raw}
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="js"}
+{/block}

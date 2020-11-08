@@ -1,0 +1,108 @@
+{extend name="base" /}
+
+{block name="css"}
+<link rel="stylesheet" href="__STATIC__/css/index/article.css">
+{/block}
+
+{block name="main"}
+<!-- 文章详情 -->
+<div class="detail">
+        <div class="panel">
+            <div class="panel-body">
+                <!-- 标题 -->
+                <div class="article_title">
+                    <h3>{$detail.title}</h3>
+                </div>
+                <!-- 菜单 -->
+                <div class="article_menu">
+                    <span>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        {$detail.create_time}
+                    </span>
+                        <span>
+                        <i class="fa fa-commenting" aria-hidden="true"></i>
+                        {$detail.commont}
+                    </span>
+                        <span>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        {$detail.read}
+                    </span>
+                        <span>
+                        <i class="fa fa-tags" aria-hidden="true"></i>
+                        {$detail.labels}
+                    </span>
+                </div>
+                <!-- 文章内容 -->
+                <div class="article_content">
+                    {$detail.content|raw}
+                </div>
+                <!-- 本文链接 -->
+                <div class="cshare">
+                    本文链接地址，转载请标注：<span id="link"><?php echo 'http://'
+                        .$_SERVER['SERVER_NAME']
+                        .$_SERVER["REQUEST_URI"]
+                        .$_SERVER["QUERY_STRING"];
+                    ?></span>
+<!--                    <i id="copy" class="fa fa-clone" aria-hidden="true"></i>-->
+                </div>
+                <!-- 评论 -->
+                <div class="comment">
+                    <h4>评论</h4>
+                    <form action="{:url('/article/comment')}?id={$detail.id}" class="form-horizontal" method="post">
+                        <input type="hidden" name="__token__" value="{$Request.token}" />
+                        <div class="form-group">
+                            <label for="inputUserName" class="col-sm-2 control-label">用户名</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="username" max="30" class="form-control" id="inputUserName" placeholder="请输入您的评论名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="邮箱不会公开，只用于回复通知使用">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputComment" class="col-sm-2 control-label">评论</label>
+                            <div class="col-sm-10">
+                                <textarea name="content" class="form-control" id="inputComment" placeholder="请输入您想要说的话"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">提交</button>
+                                <button type="reset" class="btn btn-default">清空</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- 评论列表 -->
+                <div class="show-comment">
+                    <h4>评论列表</h4>
+                    <div class="show-comment-list">
+                        {foreach $contentList as $key=>$val}
+                            <div class="item">
+                                <div class="user">
+                                    <div class="user-name">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        {$val['username']}
+                                    </div>
+                                    <div class="user-create_time">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        {$val['create_time']}
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    {$val['content']}
+                                </div>
+                            </div>
+                        {/foreach}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}
+
+{block name="js"}
+{/block}
